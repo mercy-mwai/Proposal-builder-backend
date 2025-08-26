@@ -11,12 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('templates', function (Blueprint $table) {
+        Schema::create('proposals', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name');
-            $table->json('data');
-            $table->text('html_template');
+
+            $table->unsignedBigInteger('user_id');
+            $table->string('template_type');
+            $table->json('form_data');
+            $table->string('status')->default('pending');
+            $table->string('payment_status')->default('unpaid');
         });
     }
 
@@ -25,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('templates');
+        Schema::dropIfExists('proposals');
     }
 };

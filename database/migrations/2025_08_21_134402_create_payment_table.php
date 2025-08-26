@@ -11,12 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('templates', function (Blueprint $table) {
+        Schema::create('payment', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name');
-            $table->json('data');
-            $table->text('html_template');
+            $table->unsignedBigInteger('proposal_id');
+            $table->string('mpesa_transaction_id');
+            $table->decimal('amount',10,2);
+            $table->string('status')->default('pending');
+
+            $table->foreign('proposal_id')->references('id')->on('proposals')->onDelete('cascade');
         });
     }
 
@@ -25,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('templates');
+        Schema::dropIfExists('payment');
     }
 };
