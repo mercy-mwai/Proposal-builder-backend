@@ -105,7 +105,7 @@ class AuthController extends Controller
 
         return response()->JSON([
             'success'=>false,
-            'message'=>'Invalid crendentials'
+            'message'=>'Invalid credentials'
         ],401);
 
        }catch(Exception $e){
