@@ -83,8 +83,37 @@ class AuthController extends Controller
        }
 
     }
-    public function login(){
+    public function login(Request $request)
+    {
+       try{
+         $request->validate([
+            'email'=>'required|email',
+            'password'=>'required'
+         ]);
 
+         if(Auth::attempt($request->only('email', 'password'))){
+            $user=Auth::user();
+            $token=$user->createToken('auth-token')->plainTextToken;
+
+            return response()->JSON([
+            'success'=>false,
+            'message'=>'User logged in successfully',
+            'user'=>$user,
+            'token'=>$token
+        ]);
+    }
+
+        return response()->JSON([
+            'success'=>false,
+            'message'=>'Invalid crendentials'
+        ],401);
+
+       }catch(Exception $e){
+        return response()->JSON([
+            'success'=>false,
+            'message'=>'Logged in Failed'
+        ],500);
+       }
     }
     public function logout(Request $request){
        try{
