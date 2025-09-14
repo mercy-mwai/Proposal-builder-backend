@@ -18,7 +18,6 @@ class AuthController extends Controller
     {
         return Socialite::driver('google')->redirect();
     }
-
     public function callbackGoogle()
     {
         try
