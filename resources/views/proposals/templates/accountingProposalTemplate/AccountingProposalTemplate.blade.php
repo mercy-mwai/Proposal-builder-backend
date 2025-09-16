@@ -2536,12 +2536,12 @@
     </div>
     <p class="c33"><span class="c15 c56">ACCOUNTING</span></p>
     <p class="c33"><span class="c15">PROPOSAL</span></p>
-    <p class="c57 c35"><span class="c20">For {client_name}</span></p>
-    <p class="c35 c71"><span class="c10">Prepared by {user_assigned}</span></p>
-    <p class="c25 c35"><span class="c28">{company_name}</span></p>
-    <p class="c25 c35"><span class="c26">{user_phone} | {user_email}</span></p>
-    <p class="c25 c35"><span class="c26">{company_address_1} | {company_city}, {company_state}| {company_zip_code} |
-            {company_url}</span></p>
+    <p class="c57 c35"><span class="c20">For {{ $client_name}}</span></p>
+    <p class="c35 c71"><span class="c10">Prepared by {{ $user_assigned}}</span></p>
+    <p class="c25 c35"><span class="c28">{{ $company_name}}</span></p>
+    <p class="c25 c35"><span class="c26">{{ $user_phone}} | {{ $user_email}}</span></p>
+    <p class="c25 c35"><span class="c26">{{ $company_address_1}} | {{ $company_city}},{{ $company_street}}| {{ $company_zip_code}} |
+            {{ $company_url}}</span></p>
     <p class="c0 c9"><span class="c5"></span></p>
     <p class="c0 c9"><span class="c5"></span></p>
     <p class="c0 c9"><span class="c5"></span></p>
@@ -2549,27 +2549,27 @@
     <h1 class="c0 c31 c23" id="h.33v7wqpuu3jo"><span>Cover </span><span class="c5">Letter</span></h1>
     <p class="c25 c1 c9"><span class="c5"></span></p>
     <p class="c25 c1"><span class="c7">Dear {client_contact_first},</span></p>
-    <p class="c25 c1"><span class="c7">{company_name} is pleased to present this proposal to provide professional
-            accounting, consulting and financial managements services to {client_name}. Our experience in providing
+    <p class="c25 c1"><span class="c7">{{ $company_name}} is pleased to present this proposal to provide professional
+            accounting, consulting and financial managements services to {{ $client_name}}. Our experience in providing
             (INSERT INDUSTRY, ie. medical, small-business, etc) accounting services in {client_province} over the last #
             years, provides us with a solid understanding of your business environment and needs.</span></p>
     <p class="c25 c1"><span class="c7">We have over # of clients that work in the INDUSTRY. This represents #% of
-            the business completed by {company_name}. We are active members in the INDUSTRY community and believe that
-            we can provide {client_name} with outstanding expert service that is unmatched by other accounting
+            the business completed by {{ $company_name}}. We are active members in the INDUSTRY community and believe that
+            we can provide {{ $client_name}} with outstanding expert service that is unmatched by other accounting
             companies.</span></p>
-    <p class="c25 c1"><span class="c7">We have developed this package that follows with {client_name} in mind,
+    <p class="c25 c1"><span class="c7">We have developed this package that follows with {{ $client_name}} in mind,
             providing information that is most relevant to your current business needs.</span></p>
     <p class="c25 c1"><span class="c7">If you are interested in any additional information, do not hesitate to
             contact us. We look forward to serving you.</span></p>
     <p class="c25 c1"><span class="c7">Sincerely,</span></p>
-    <p class="c25 c1"><span class="c45">{user_assigned}</span></p>
+    <p class="c25 c1"><span class="c45">{{ $user_assigned}}</span></p>
     <p class="c25 c1"><span class="c59">{user_title}</span></p>
     <hr style="page-break-before:always;display:none;">
     <p class="c0 c1 c9"><span class="c5"></span></p>
     <h1 class="c0 c31 c23" id="h.60m1v0grubzn"><span class="c5">About Us</span></h1>
     <p class="c1 c22 subtitle" id="h.84y3oq3rvx7h"><span class="c68"><br></span><span class="c11">With more than x
-            years of service, {company_name} is focused on providing our clients advice on taxation, accounting and
-            consulting services that reflect their needs. {company_name} has been located in the {company_city} area,
+            years of service, {{ $company_name}} is focused on providing our clients advice on taxation, accounting and
+            consulting services that reflect their needs. {{ $company_name}} has been located in the {{ $company_city}} area,
             providing our accounting, tax and consulting services focussed on [industry 1], [industry 2], and [industry
             3].</span></p>
     <p class="c25 c1"><span class="c7">Our team has X people dedicated to our PROPOSED CLIENT INDUSTRY, with an
@@ -2594,7 +2594,7 @@
     <h1 class="c0 c31 c23" id="h.wr8w56vxawck"><span class="c5">Team</span></h1>
     <p class="c0 c1 c9"><span class="c5"></span></p>
     <p class="c64 c1 c23 subtitle" id="h.afd999d4mlj8"><span class="c11">As our client your engagement would be led
-            by a single partner, {user_assigned}. {user_assigned} is backed by a team of dedicated and seasoned
+            by a single partner, {{ $user_assigned}}. {{ $user_assigned}} is backed by a team of dedicated and seasoned
             professionals, who have a combined # years experience in INSERT INDUSTRY.</span></p>
     <h2 class="c1 c23 c61" id="h.nbccob5xwox1"><span class="c20">James McIntyre </span></h2>
     <h3 class="c71 c1 c23" id="h.iz5cidwuumy9"><span class="c11 c1">CPA, Team Lead</span></h3>
@@ -2619,7 +2619,7 @@
                 alt="" src="images/image1.jpg"
                 style="width: 624.00px; height: 312.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
-    <p class="c22 c1 subtitle" id="h.yx6q9xuzs239"><span class="c11">{client_name} is interested in securing an
+    <p class="c22 c1 subtitle" id="h.yx6q9xuzs239"><span class="c11">{{ $client_name}} is interested in securing an
             accounting partner to assist with restructuring the booking keeping and accounting, as well as regular tax
             filings. </span></p>
     <p class="c1 c9 c25"><span class="c7"></span></p>
@@ -2637,12 +2637,12 @@
     <h1 class="c0 c31 c23 c60" id="h.cx14qemp8rg1"><span class="c5"></span></h1>
     <h1 class="c0 c31 c23" id="h.w4a8e1yliwt"><span class="c5">Proposal</span></h1>
     <p class="c1 c23 c64 subtitle" id="h.mcsjfx3xpd8l"><span class="c68"><br></span><span
-            class="c11">{company_name} will help {client_name} move to a comprehensive transaction management
+            class="c11">{{ $company_name}} will help {{ $client_name}} move to a comprehensive transaction management
             service build on the QuickBooks platform. This move will allow for all bookkeeping and accounting functions
             to be seamlessly accessible as well as provide complete customer data access.</span></p>
-    <p class="c25 c1"><span class="c7">{company_name} proposes to host and maintain all the QuickBooks data files,
+    <p class="c25 c1"><span class="c7">{{ $company_name}} proposes to host and maintain all the QuickBooks data files,
             so that actually licensing costs are built into Expert Accountants weekly service fee so that there is no
-            software investment required. {client_name} will own the data file at all times.</span></p>
+            software investment required. {{ $client_name}} will own the data file at all times.</span></p>
     <p class="c1 c41"><span class="c20">QuickBooks Startup (20 hrs)</span></p>
     <ul class="c27 lst-kix_hewzk2oremzi-0 start">
         <li class="c4 c1 li-bullet-0"><span class="c7">Build the QuickBooks file based on existing Chart of
@@ -2817,14 +2817,14 @@
                 alt="" src="images/image2.jpg"
                 style="width: 624.00px; height: 312.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
-    <p class="c8 c1 c23 subtitle" id="h.jqjwr59hqock"><span class="c11">{company_name} are very interested in
-            working with {client_name} and would love to set up a meeting with you to answer any questions you may have
+    <p class="c8 c1 c23 subtitle" id="h.jqjwr59hqock"><span class="c11">{{ $company_name}} are very interested in
+            working with {{ $client_name}} and would love to set up a meeting with you to answer any questions you may have
             and determine the next steps in this process. </span></p>
-    <h2 class="c8 c1 c23" id="h.jhfdw7hfoc97"><span class="c20">{user_assigned}</span></h2>
-    <p class="c25 c1"><span class="c7">{user_title}<br>{company_name}{user_phone} | {user_email}</span></p>
-    <p class="c25 c1"><span class="c7">{company_address_1} | {company_city}, {company_state}
-            {company_zip_code}</span></p>
-    <p class="c25 c1"><span class="c7">{company_url}</span></p>
+    <h2 class="c8 c1 c23" id="h.jhfdw7hfoc97"><span class="c20">{{ $user_assigned}}</span></h2>
+    <p class="c25 c1"><span class="c7">{user_title}<br>{{ $company_name}}{{ $user_phone}} | {{ $user_email}}</span></p>
+    <p class="c25 c1"><span class="c7">{{ $company_address_1}} | {{ $company_city}},{{ $company_street}}
+            {{ $company_zip_code}}</span></p>
+    <p class="c25 c1"><span class="c7">{{ $company_url}}</span></p>
     <div>
         <p class="c1 c9 c53"><span class="c3"></span></p>
         <p class="c39"><span class="c42">&nbsp;</span></p>
