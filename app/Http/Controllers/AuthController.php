@@ -18,27 +18,31 @@ class AuthController extends Controller
     {
         return Socialite::driver('google')->redirect();
     }
-    public function callbackGoogle()
+    public function googleAuthentication()
     {
         try
         {
-            $google_user=Socialite::driver('google')->user();
-            $user= User::where('google_id', $google_user->getId())->first();
+            $googleUser=Socialite::driver('google')->user();
+            $user= User::where('google_id', $googleUser->getId())->first();
 
             if(!$user){
-                $new_user=User::create([
-                    'name'=>$google_user->getName(),
-                    'email'=>$google_user->getEmail(),
-                    'google_id'=>$google_user->getId()
+                $newUser=User::create([
+                    'name'=>$googleUser->getName(),
+                    'email'=>$googleUser->getEmail(),
+                    'google_id'=>$googleUser->getId()
                 ]);
-                 Auth::login($new_user);
+
+                if($newUser){
+                 Auth::login($newUser);
                  return redirect()->intended('dashboard');
+                }
             }else{
                 Auth::login($user);
+                return redirect()->route('dashboard');
             }
            
-        }catch(Throwable $th){
-            dd('Something went wrong!' .$th->getMessage());
+        }catch(Exception $e){
+            dd('Something went wrong!' .$e->getMessage());
         }
     }
 
