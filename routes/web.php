@@ -6,7 +6,9 @@ use App\Http\Controllers\AuthController;
 Route::get('/accounting-proposal', function () {
     return view('proposals.templates.accountingProposalTemplate.AccountingProposalTemplate');
 });
-
+Route:: get('/business-proposal', function (){
+    return view('proposals.templates.businessConsultingTemplate.businessConsultingTemplate');
+});
 
 Route::prefix('auth')->group(function(){
 Route::get('/google',[AuthController::class, 'redirect'])->name('google-auth');

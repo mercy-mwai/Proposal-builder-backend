@@ -405,6 +405,7 @@
             background: #fff;
             padding: 1.5rem;
             border-radius: 0.5rem;
+            
         }
 
         .page-explanation {
@@ -418,8 +419,6 @@
 </head>
 
 <body class="doc-content">
-
-    
 
 
         <main class="proposal-content">
