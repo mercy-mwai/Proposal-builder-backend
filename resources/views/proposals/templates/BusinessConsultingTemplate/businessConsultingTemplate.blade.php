@@ -16,7 +16,6 @@
         .lst-kix_emcyn0oar2i8-7>li {
             counter-increment: lst-ctn-kix_emcyn0oar2i8-7
         }
-
         .lst-kix_621thlwaly6u-6>li:before {
             content: "\0025cf   "
         }
