@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
+
 Route::get('/accounting-proposal', function () {
     return view('proposals.templates.businessProposals.accountingProposalTemplate.AccountingProposalTemplate');
 });

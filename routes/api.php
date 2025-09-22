@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TemplateController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -15,3 +16,5 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::middleware('auth:sanctum')->prefix('auth')->group(function(){
 Route::post('/logout', [AuthController::class, 'logout']);
 });
+
+Route::get('/allTemplates',[TemplateController:: class, 'allTemplates']);
