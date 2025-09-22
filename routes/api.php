@@ -17,4 +17,7 @@ Route::middleware('auth:sanctum')->prefix('auth')->group(function(){
 Route::post('/logout', [AuthController::class, 'logout']);
 });
 
-Route::get('/allTemplates',[TemplateController:: class, 'allTemplates']);
+Route::get('/templates', TemplateController::class, 'allTempplates');
+Route::get('templates/category/{category}', TemplateController::class, 'sortByCategory');
+Route::get('/templates/category/{id}', TemplateController::class, 'sortById');
+
