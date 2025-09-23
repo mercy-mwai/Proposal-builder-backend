@@ -6,6 +6,6 @@ use App\Http\Controllers\AuthController;
 
 
 Route::prefix('auth')->group(function(){
-Route::get('/google',[AuthController::class, 'redirect'])->name('google-auth');
+Route::get('/google',[AuthController::class, 'redirect'])->name('redirect');
 Route::get('/google/callback', [AuthController::class, 'googleAuthentication']);
 });
