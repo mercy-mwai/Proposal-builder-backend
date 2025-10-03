@@ -65,8 +65,8 @@ class AuthController extends Controller
                 'id'=>$user->id,
                 'name'=>$user->name,
                 'email'=>$user->email
-            ],
-            'token'=>$user->createToken('auth_token')->plainTextToken
+            ]
+            
         ], 201);
        }catch(ValidationException $e){
              return response()->json([
@@ -85,6 +85,7 @@ class AuthController extends Controller
        }
 
     }
+
     public function login(Request $request)
     {
        try{
@@ -95,13 +96,12 @@ class AuthController extends Controller
 
          if(Auth::attempt($request->only('email', 'password'))){
             $user=Auth::user();
-            $token=$user->createToken('auth-token')->plainTextToken;
-
+            
             return response()->JSON([
-            'success'=>false,
+            'success'=>true,
             'message'=>'User logged in successfully',
             'user'=>$user,
-            'token'=>$token
+           
         ]);
     }
 

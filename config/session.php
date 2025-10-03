@@ -4,6 +4,9 @@ use Illuminate\Support\Str;
 
 return [
 
+
+    
+
     /*
     |--------------------------------------------------------------------------
     | Default Session Driver
@@ -17,6 +20,7 @@ return [
     |            "redis", "dynamodb", "array"
     |
     */
+
 
     'driver' => env('SESSION_DRIVER', 'database'),
 
