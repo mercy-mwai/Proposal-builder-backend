@@ -72,10 +72,11 @@ class AuthController extends Controller
              return response()->json([
             'success'=>false,
             'message'=>'Validation failed',
-            'errors'=>[
-                'email'=>['Email already exists']
-            ]
-        ]);
+            // 'errors'=>[
+            //     'email'=>['Email already exists']
+            // ]
+            'errors'=>$e->errors()
+        ],422);
        }catch(Exception $e){
             return response()->json([
             'success' => false,
