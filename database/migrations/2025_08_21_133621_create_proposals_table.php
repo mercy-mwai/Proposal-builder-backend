@@ -15,11 +15,16 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->unsignedBigInteger('user_id');
-            $table->string('template_type');
-            $table->json('form_data');
-            $table->string('status')->default('pending');
-            $table->string('payment_status')->default('unpaid');
+            $table->string('company_name');
+            $table->string('contact_person');
+            $table->string('email');
+           $table->string('phone');
+           $table->text('address')->nullable;
+           $table->string('title');
+           $table->longtext('executive_summary');
+           $table->date('start_date');
+           $table->date('end_date');
+           $table->string('logo_path');
         });
     }
 
